@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Sergio Torres',
+  title: 'Sergio Teixeira',
   tagline: 'Software Engineering and some cool stuff...',
   favicon: 'img/favicon.ico',
 
@@ -56,9 +56,9 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'Home',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Sergio',
           src: 'img/logo.svg',
         },
         items: [
@@ -72,7 +72,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        copyright: `Copyright © ${new Date().getFullYear()} Sergio Torres, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Sergio Teixeira, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

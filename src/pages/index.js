@@ -7,7 +7,7 @@ import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
 import styles from './index.module.css';
 import SocialMedias from '../components/SocialMedias';
-import useBaseUrl from '@docusaurus/useBaseUrl';
+import ProfilePictureUrl from '@site/static/img/profile-picture.png';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -19,7 +19,7 @@ function HomepageHeader() {
           <Box m="auto">
             <Avatar
               alt="Sergio Teixeira"
-              src={useBaseUrl('/img/profile-picture.png')}
+              src={ProfilePictureUrl}
               sx={{ width: 150, height: 150, m: 2 }}
             />
           </Box>
