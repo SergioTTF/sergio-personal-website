@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import {NotificationManager} from 'react-notifications';
 import { loadCSS } from 'fg-loadcss';
 import Icon from '@mui/material/Icon';
 
@@ -24,9 +24,10 @@ const socialLinks = [
   },
   {
     faIconclass: "fas fa-envelope fa-fw",
-    key: "Email",
-    url: "mailto:sergiottfilho@gmail.com",
+    key: "Copy Email",
+    url: "sergiottfilho@gmail.com",
     hoverColor: "#952323",
+    copyLink: true,
   },
   {
     faIconclass: "fab fa-stack-overflow fa-fw",
@@ -36,6 +37,10 @@ const socialLinks = [
   },
 ];
 
+function showCopiedEmailNotification(email)  {
+  NotificationManager.success('', 'Email address copied!');
+  navigator.clipboard.writeText(email)
+}
 function SocialMedias() {
   useEffect(() => {
     const node = loadCSS(
@@ -52,25 +57,53 @@ function SocialMedias() {
   return (
     <div>
       {socialLinks.map(cn => {
-        return (
-          <a
-            href={cn.url}
-            key={cn.key}
-            title={cn.key}
-          >
-            <Icon
-              className={cn.faIconclass}
-              sx={{
-                fontSize: 30,
-                marginTop: 1,
-                marginRight: 1,
-                '&:hover': {
-                  color: cn.hoverColor,
-                },
-              }}
-            />
-          </a>
-        );
+        if(cn.copyLink) {
+          return (
+            <a
+              href="#"
+              key={cn.key}
+              title={cn.key}
+              onClick={() => showCopiedEmailNotification(cn.url)}
+            >
+              <Icon
+                className={cn.faIconclass}
+                sx={{
+                  fontSize: 40,
+                  marginTop: 1,
+                  marginRight: 1,
+                  transition: "transform 250ms",
+                  '&:hover': {
+                    color: cn.hoverColor,
+                    transform: "translateY(-10px)",
+                  },
+                }}
+              />
+            </a>
+          );
+        } else {
+          return (
+            <a
+            className='floatingIcon'
+              href={cn.url}
+              key={cn.key}
+              title={cn.key}
+            >
+              <Icon
+                className={cn.faIconclass}
+                sx={{
+                  fontSize: 40,
+                  marginTop: 1,
+                  marginRight: 1,
+                  transition: "transform 250ms",
+                  '&:hover': {
+                    color: cn.hoverColor,
+                    transform: "translateY(-10px)",
+                  },
+                }}
+              />
+            </a>
+          );
+        }
       })}
     </div>
   );

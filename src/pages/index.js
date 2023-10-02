@@ -8,6 +8,8 @@ import Box from '@mui/material/Box';
 import styles from './index.module.css';
 import SocialMedias from '../components/SocialMedias';
 import ProfilePictureUrl from '@site/static/img/profile-picture.png';
+import {NotificationContainer} from 'react-notifications';
+import 'react-notifications/lib/notifications.css';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -40,6 +42,7 @@ export default function Home() {
       <main>
         <HomepageFeatures />
       </main>
+      <NotificationContainer />
     </Layout>
   );
 }
