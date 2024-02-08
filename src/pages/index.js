@@ -7,7 +7,6 @@ import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
 import styles from './index.module.css';
 import SocialMedias from '../components/SocialMedias';
-import ProfilePictureUrl from '@site/static/img/profile-picture.png';
 import {NotificationContainer} from 'react-notifications';
 import 'react-notifications/lib/notifications.css';
 
@@ -21,7 +20,7 @@ function HomepageHeader() {
           <Box m="auto">
             <Avatar
               alt="Sergio Teixeira"
-              src={ProfilePictureUrl}
+              src="https://github.com/sergiottf.png"
               sx={{ width: 150, height: 150, m: 2 }}
             />
           </Box>

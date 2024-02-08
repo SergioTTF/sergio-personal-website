@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Sergio Teixeira',
-  tagline: 'Software Engineering and some cool stuff...',
+  tagline: 'Software Engineer',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here

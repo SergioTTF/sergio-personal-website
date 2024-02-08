@@ -53,10 +53,36 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
+        <div className='row'>
+          <h2>About me</h2>
+        </div>
+        <div className='row'>
+          <p>I'm a developer passionate about leveraging technology to enhance our daily lives.</p>
+        </div>
         <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
+          <p>💻 Currently working as Software Engineer @  {' '}<a
+        href="https://inter.co"
+        target="_blank"  // Optional: Opens the link in a new tab
+        rel="noopener noreferrer"  // Recommended for security when using target="_blank"
+        style={{ color: '#ff8700', fontWeight: 'bold' }}
+      >
+        Inter
+      </a>.
+      </p>
+        </div>
+        <div className="row">
+          <p>Most of my professional experience consists of Back-end development using Java and Microservices architecture.</p>
+        </div>
+        <div className="row">
+          <p>🎓 Graduated with a Bachelor's degree in Computer Science at {' '}<a
+        href="https://www.ufpe.br/"
+        target="_blank"  // Optional: Opens the link in a new tab
+        rel="noopener noreferrer"  // Recommended for security when using target="_blank"
+        style={{ color: '#990000', fontWeight: 'bold' }}
+      >
+        Federal University of Pernambuco(UFPE)
+      </a>.
+      </p>
         </div>
       </div>
     </section>
